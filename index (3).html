@@ -1,0 +1,1979 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>Anuradha Tripathi — Marketing & Brand Portfolio</title>
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;1,300;1,400;1,500&family=Libre+Baskerville:ital,wght@0,400;0,700;1,400&family=Jost:wght@300;400;500&display=swap" rel="stylesheet" />
+<style>
+  :root {
+    --burgundy:    #4a0e1a;
+    --burgundy-mid:#6b1a2a;
+    --gold:        #c9a84c;
+    --gold-light:  #e8d5a3;
+    --cream:       #faf5ee;
+    --cream-dark:  #f0e8d8;
+    --ink:         #1a0a0e;
+    --muted:       #7a6060;
+    --serif: 'Cormorant Garamond', 'Libre Baskerville', Georgia, serif;
+    --sans: 'Jost', 'Helvetica Neue', sans-serif;
+  }
+
+  *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+  html { scroll-behavior: smooth; font-size: 16px; }
+
+  body {
+    font-family: var(--sans);
+    background: var(--cream);
+    color: var(--ink);
+    overflow-x: hidden;
+  }
+
+  /* ─── NAV ─────────────────────────────────── */
+  nav {
+    position: fixed; top: 0; left: 0; right: 0; z-index: 100;
+    display: flex; justify-content: space-between; align-items: center;
+    padding: 1.2rem 4rem;
+    background: rgba(74,14,26,0.96);
+    backdrop-filter: blur(12px);
+    border-bottom: 1px solid rgba(201,168,76,0.2);
+  }
+  .nav-logo {
+    font-family: var(--serif);
+    font-size: 1.1rem; font-weight: 500;
+    color: var(--gold-light); letter-spacing: 0.08em;
+    text-decoration: none;
+  }
+  .nav-links { display: flex; gap: 2.5rem; list-style: none; }
+  .nav-links a {
+    font-family: var(--sans); font-size: 0.7rem; font-weight: 500;
+    letter-spacing: 0.18em; text-transform: uppercase;
+    color: rgba(232,213,163,0.75); text-decoration: none;
+    transition: color 0.3s;
+  }
+  .nav-links a:hover { color: var(--gold); }
+  .nav-cta {
+    font-family: var(--sans); font-size: 0.68rem; font-weight: 500;
+    letter-spacing: 0.15em; text-transform: uppercase;
+    color: var(--gold); border: 1px solid var(--gold);
+    padding: 0.5rem 1.4rem; text-decoration: none;
+    transition: all 0.3s;
+  }
+  .nav-cta:hover { background: var(--gold); color: var(--burgundy); }
+
+  /* ─── HERO ────────────────────────────────── */
+  #hero {
+    min-height: 100vh;
+    background: var(--burgundy);
+    display: flex; flex-direction: column;
+    justify-content: center; align-items: center;
+    text-align: center;
+    padding: 8rem 2rem 4rem;
+    position: relative; overflow: hidden;
+  }
+  #hero::before {
+    content: '';
+    position: absolute; inset: 0;
+    background: radial-gradient(ellipse at 30% 60%, rgba(201,168,76,0.08) 0%, transparent 60%),
+                radial-gradient(ellipse at 70% 30%, rgba(107,26,42,0.6) 0%, transparent 50%);
+    pointer-events: none;
+  }
+  .hero-eyebrow {
+    font-family: var(--sans); font-size: 0.68rem; font-weight: 500;
+    letter-spacing: 0.3em; text-transform: uppercase;
+    color: var(--gold); margin-bottom: 1.8rem;
+    display: flex; align-items: center; gap: 1rem;
+  }
+  .hero-eyebrow::before, .hero-eyebrow::after {
+    content: ''; display: block; width: 3rem; height: 1px; background: var(--gold);
+  }
+  .hero-name {
+    font-family: var(--serif); font-size: clamp(3.5rem, 8vw, 7rem);
+    font-weight: 300; color: var(--gold-light);
+    line-height: 1.0; letter-spacing: -0.01em;
+    margin-bottom: 0.5rem;
+  }
+  .hero-sub {
+    font-family: var(--sans); font-size: 0.72rem; font-weight: 400;
+    letter-spacing: 0.28em; text-transform: uppercase;
+    color: rgba(232,213,163,0.6); margin-bottom: 2.5rem;
+  }
+  .hero-tagline {
+    font-family: var(--serif); font-style: italic;
+    font-size: clamp(1.1rem, 2.5vw, 1.5rem); font-weight: 300;
+    color: rgba(250,245,238,0.82); margin-bottom: 3rem;
+    max-width: 32rem;
+  }
+  .hero-line {
+    width: 6rem; height: 1px; background: linear-gradient(90deg, transparent, var(--gold), transparent);
+    margin: 0 auto 3rem;
+  }
+  .hero-ctas { display: flex; gap: 1.2rem; justify-content: center; flex-wrap: wrap; }
+  .btn-primary {
+    font-family: var(--sans); font-size: 0.68rem; font-weight: 500;
+    letter-spacing: 0.18em; text-transform: uppercase;
+    background: var(--gold); color: var(--burgundy);
+    padding: 0.9rem 2.2rem; text-decoration: none;
+    transition: all 0.3s;
+  }
+  .btn-primary:hover { background: var(--gold-light); }
+  .btn-outline {
+    font-family: var(--sans); font-size: 0.68rem; font-weight: 500;
+    letter-spacing: 0.18em; text-transform: uppercase;
+    border: 1px solid rgba(201,168,76,0.5); color: var(--gold-light);
+    padding: 0.9rem 2.2rem; text-decoration: none;
+    transition: all 0.3s;
+  }
+  .btn-outline:hover { border-color: var(--gold); color: var(--gold); }
+  .hero-scroll {
+    position: absolute; bottom: 2.5rem; left: 50%; transform: translateX(-50%);
+    font-family: var(--sans); font-size: 0.6rem; font-weight: 400;
+    letter-spacing: 0.25em; text-transform: uppercase;
+    color: rgba(201,168,76,0.5); display: flex; flex-direction: column; align-items: center; gap: 0.6rem;
+  }
+  .hero-scroll::after {
+    content: ''; width: 1px; height: 2.5rem;
+    background: linear-gradient(to bottom, var(--gold), transparent);
+    animation: scrollLine 2s ease-in-out infinite;
+  }
+  @keyframes scrollLine { 0%,100%{opacity:0.3} 50%{opacity:1} }
+
+  /* ─── SECTIONS ────────────────────────────── */
+  section { padding: 7rem 4rem; }
+
+  .section-label {
+    font-family: var(--sans); font-size: 0.62rem; font-weight: 500;
+    letter-spacing: 0.3em; text-transform: uppercase;
+    color: var(--gold); margin-bottom: 1rem;
+    display: flex; align-items: center; gap: 0.8rem;
+  }
+  .section-label::before { content: ''; display: block; width: 2rem; height: 1px; background: var(--gold); }
+
+  .section-title {
+    font-family: var(--serif); font-size: clamp(2.2rem, 4vw, 3.5rem);
+    font-weight: 300; color: var(--burgundy); line-height: 1.1;
+    margin-bottom: 0.5rem;
+  }
+  .section-title em { font-style: italic; color: var(--burgundy-mid); }
+
+  /* ─── WHO I AM ──────────────────────────────*/
+  #about { background: var(--cream); }
+  .about-grid {
+    display: grid; grid-template-columns: 1fr 1.5fr; gap: 5rem;
+    align-items: start; max-width: 1100px; margin: 0 auto;
+  }
+  .about-left {}
+  .about-photo {
+    width: 100%; aspect-ratio: 3/4; background: var(--cream-dark);
+    border: 1px solid var(--gold-light); position: relative;
+    display: flex; flex-direction: column; align-items: center; justify-content: center;
+    margin-bottom: 2rem; overflow: hidden;
+  }
+  .about-photo img { width: 100%; height: 100%; object-fit: cover; display: none; }
+  .photo-placeholder {
+    font-family: var(--sans); font-size: 0.62rem; font-weight: 400;
+    letter-spacing: 0.2em; text-transform: uppercase; text-align: center;
+    color: var(--muted); padding: 2rem;
+    border: 1px dashed rgba(201,168,76,0.4); margin: 1.5rem;
+  }
+  .photo-placeholder span { display: block; font-size: 2rem; margin-bottom: 0.5rem; opacity: 0.4; }
+  .about-contact-pills { display: flex; flex-direction: column; gap: 0.5rem; }
+  .pill {
+    font-family: var(--sans); font-size: 0.7rem; font-weight: 400;
+    color: var(--burgundy-mid); letter-spacing: 0.05em;
+    display: flex; align-items: center; gap: 0.6rem;
+  }
+  .pill::before { content: '—'; color: var(--gold); font-size: 0.6rem; }
+
+  .about-right {}
+  .about-years {
+    font-family: var(--serif); font-size: 5rem; font-weight: 300;
+    color: var(--gold-light); line-height: 1; margin-bottom: 0.2rem;
+    border-bottom: 1px solid var(--gold-light); padding-bottom: 0.5rem;
+    display: inline-block;
+  }
+  .about-years span { font-size: 1.2rem; }
+  .about-years-label {
+    font-family: var(--sans); font-size: 0.65rem; letter-spacing: 0.2em;
+    text-transform: uppercase; color: var(--muted); margin-bottom: 2rem;
+  }
+  .about-body {
+    font-family: var(--serif); font-size: 1.05rem; font-weight: 400;
+    line-height: 1.85; color: #3d2020; margin-bottom: 2rem;
+  }
+  .about-body strong { color: var(--burgundy); font-weight: 600; }
+  .about-philosophy {
+    border-left: 2px solid var(--gold); padding: 1.2rem 1.8rem;
+    background: var(--cream-dark); margin-bottom: 2.5rem;
+  }
+  .about-philosophy p {
+    font-family: var(--serif); font-style: italic; font-size: 1.05rem;
+    font-weight: 300; line-height: 1.7; color: var(--burgundy);
+  }
+  .about-tags { display: flex; flex-wrap: wrap; gap: 0.5rem; }
+  .tag {
+    font-family: var(--sans); font-size: 0.62rem; font-weight: 400;
+    letter-spacing: 0.12em; text-transform: uppercase;
+    padding: 0.35rem 0.9rem; border: 1px solid var(--gold-light);
+    color: var(--burgundy-mid); background: transparent;
+    transition: all 0.3s;
+  }
+  .tag:hover { background: var(--gold-light); color: var(--burgundy); }
+
+  /* ─── NUMBERS ───────────────────────────────*/
+  #numbers {
+    background: var(--burgundy);
+    text-align: center;
+  }
+  #numbers .section-title { color: var(--gold-light); }
+  #numbers .section-label { color: var(--gold); justify-content: center; }
+  #numbers .section-label::before { display: none; }
+  .metrics-grid {
+    display: grid; grid-template-columns: repeat(auto-fit, minmax(220px,1fr));
+    gap: 2px; margin-top: 4rem; max-width: 1100px; margin-left: auto; margin-right: auto;
+  }
+  .metric-card {
+    background: rgba(255,255,255,0.04); border: 1px solid rgba(201,168,76,0.15);
+    padding: 2.5rem 2rem; text-align: center;
+    transition: background 0.3s;
+  }
+  .metric-card:hover { background: rgba(201,168,76,0.08); }
+  .metric-num {
+    font-family: var(--serif); font-size: 3.2rem; font-weight: 300;
+    color: var(--gold); line-height: 1; margin-bottom: 0.5rem;
+  }
+  .metric-label {
+    font-family: var(--sans); font-size: 0.65rem; font-weight: 400;
+    letter-spacing: 0.15em; text-transform: uppercase;
+    color: rgba(232,213,163,0.6); margin-bottom: 0.3rem;
+  }
+  .metric-source {
+    font-family: var(--serif); font-style: italic; font-size: 0.8rem;
+    color: rgba(201,168,76,0.5);
+  }
+
+  /* ─── WHAT I DO ─────────────────────────────*/
+  #services { background: var(--cream-dark); }
+  .services-grid {
+    display: grid; grid-template-columns: 1fr 1fr; gap: 4rem;
+    max-width: 1000px; margin: 4rem auto 0;
+  }
+  .service-col {}
+  .service-col-type {
+    font-family: var(--sans); font-size: 0.62rem; font-weight: 500;
+    letter-spacing: 0.25em; text-transform: uppercase;
+    color: var(--muted); margin-bottom: 0.5rem;
+  }
+  .service-col-title {
+    font-family: var(--serif); font-size: 1.5rem; font-weight: 500;
+    color: var(--burgundy); margin-bottom: 0.5rem;
+    border-bottom: 1px solid var(--gold-light); padding-bottom: 0.8rem;
+  }
+  .service-col-sub {
+    font-family: var(--sans); font-size: 0.62rem; letter-spacing: 0.2em;
+    text-transform: uppercase; color: var(--gold); margin-bottom: 1.5rem;
+  }
+  .service-items { display: flex; flex-direction: column; gap: 0.6rem; }
+  .service-item {
+    font-family: var(--sans); font-size: 0.82rem; font-weight: 400;
+    color: var(--burgundy-mid); display: flex; align-items: center; gap: 0.7rem;
+  }
+  .service-item::before { content: '·'; color: var(--gold); font-size: 1.2rem; }
+
+  /* ─── CASE STUDIES ──────────────────────────*/
+  #work { background: var(--cream); }
+  .work-intro {
+    max-width: 600px; margin-bottom: 4rem;
+    font-family: var(--serif); font-size: 1rem; font-weight: 300;
+    line-height: 1.8; color: var(--muted);
+  }
+  .case-study {
+    border: 1px solid var(--gold-light); margin-bottom: 3rem;
+    overflow: hidden; max-width: 1100px; margin-left: auto; margin-right: auto;
+  }
+  .cs-header {
+    display: grid; grid-template-columns: auto 1fr auto;
+    align-items: center; gap: 2rem;
+    background: var(--cream-dark); padding: 2rem 2.5rem;
+    border-bottom: 1px solid var(--gold-light); cursor: pointer;
+  }
+  .cs-num {
+    font-family: var(--serif); font-size: 3rem; font-weight: 300;
+    color: var(--gold-light); line-height: 1;
+  }
+  .cs-title-block {}
+  .cs-title {
+    font-family: var(--serif); font-size: 1.6rem; font-weight: 500;
+    color: var(--burgundy); margin-bottom: 0.3rem;
+  }
+  .cs-meta {
+    font-family: var(--sans); font-size: 0.65rem; font-weight: 400;
+    letter-spacing: 0.15em; text-transform: uppercase;
+    color: var(--muted); display: flex; gap: 1.2rem; flex-wrap: wrap;
+  }
+  .cs-tags { display: flex; gap: 0.5rem; flex-wrap: wrap; margin-top: 0.6rem; }
+  .cs-tag {
+    font-family: var(--sans); font-size: 0.58rem; font-weight: 500;
+    letter-spacing: 0.12em; text-transform: uppercase;
+    padding: 0.25rem 0.7rem; background: var(--burgundy);
+    color: var(--gold-light);
+  }
+  .cs-arrow {
+    font-size: 1.2rem; color: var(--gold); transition: transform 0.3s;
+  }
+  .cs-body {
+    display: none; padding: 2.5rem;
+  }
+  .cs-body.open { display: grid; grid-template-columns: 1fr 1fr; gap: 3rem; }
+  .cs-section-label {
+    font-family: var(--sans); font-size: 0.6rem; font-weight: 500;
+    letter-spacing: 0.25em; text-transform: uppercase; color: var(--gold);
+    margin-bottom: 0.7rem;
+  }
+  .cs-text {
+    font-family: var(--serif); font-size: 0.95rem; font-weight: 400;
+    line-height: 1.75; color: #3d2020; margin-bottom: 1.5rem;
+  }
+  .cs-results { display: grid; grid-template-columns: 1fr 1fr; gap: 1rem; margin-bottom: 1.5rem; }
+  .cs-result {
+    text-align: center; padding: 1rem;
+    border: 1px solid var(--gold-light); background: var(--cream);
+  }
+  .cs-result-num {
+    font-family: var(--serif); font-size: 1.8rem; font-weight: 300; color: var(--gold);
+  }
+  .cs-result-label {
+    font-family: var(--sans); font-size: 0.6rem; letter-spacing: 0.12em;
+    text-transform: uppercase; color: var(--muted); margin-top: 0.2rem;
+  }
+  .cs-influencers {
+    font-family: var(--sans); font-size: 0.72rem; color: var(--burgundy-mid);
+    line-height: 1.8;
+  }
+  .cs-influencers strong { color: var(--burgundy); }
+
+  /* Image placeholder in case studies */
+  .cs-image-area {
+    grid-column: 1 / -1;
+  }
+  .image-placeholder {
+    width: 100%; min-height: 220px;
+    background: var(--cream-dark); border: 2px dashed rgba(201,168,76,0.35);
+    display: flex; flex-direction: column; align-items: center; justify-content: center;
+    gap: 0.5rem; padding: 2rem;
+  }
+  .image-placeholder .ip-icon { font-size: 2rem; opacity: 0.35; }
+  .image-placeholder p {
+    font-family: var(--sans); font-size: 0.65rem; font-weight: 400;
+    letter-spacing: 0.2em; text-transform: uppercase; text-align: center;
+    color: var(--muted);
+  }
+  .image-placeholder small {
+    font-family: var(--sans); font-size: 0.6rem; color: rgba(122,96,96,0.6);
+  }
+  .image-grid {
+    display: grid; grid-template-columns: 1fr 1fr 1fr; gap: 1rem;
+  }
+
+  /* ─── DESIGN WORK ───────────────────────────*/
+  #design { background: var(--burgundy); }
+  #design .section-title { color: var(--gold-light); }
+  #design .section-label { color: var(--gold); }
+  .design-cols {
+    display: grid; grid-template-columns: 1fr 1fr 1fr; gap: 2rem;
+    margin-top: 3.5rem; max-width: 1100px; margin-left: auto; margin-right: auto;
+  }
+  .design-col {
+    background: rgba(255,255,255,0.04); border: 1px solid rgba(201,168,76,0.2);
+    padding: 0;
+  }
+  .design-col-img {
+    width: 100%; aspect-ratio: 4/3;
+    background: rgba(255,255,255,0.06); border-bottom: 1px solid rgba(201,168,76,0.15);
+    display: flex; flex-direction: column; align-items: center; justify-content: center;
+    gap: 0.5rem; padding: 1rem;
+  }
+  .design-col-img .ip-icon { font-size: 2rem; opacity: 0.3; }
+  .design-col-img p {
+    font-family: var(--sans); font-size: 0.6rem; letter-spacing: 0.2em;
+    text-transform: uppercase; text-align: center; color: rgba(232,213,163,0.4);
+  }
+  .design-col-body { padding: 1.5rem; }
+  .design-col-name {
+    font-family: var(--serif); font-size: 1.1rem; font-weight: 500;
+    color: var(--gold-light); margin-bottom: 0.3rem;
+  }
+  .design-col-type {
+    font-family: var(--sans); font-size: 0.6rem; font-weight: 500;
+    letter-spacing: 0.15em; text-transform: uppercase; color: var(--gold);
+    margin-bottom: 0.8rem;
+  }
+  .design-col-desc {
+    font-family: var(--serif); font-size: 0.85rem; font-weight: 300;
+    line-height: 1.65; color: rgba(232,213,163,0.65);
+  }
+
+  /* ─── MOCK CAMPAIGNS ────────────────────────*/
+  #campaigns { background: var(--cream); }
+  .campaign-cards {
+    display: grid; grid-template-columns: 1fr 1fr 1fr; gap: 1.5rem;
+    margin-top: 3.5rem; max-width: 1100px; margin-left: auto; margin-right: auto;
+  }
+  .campaign-card {
+    border: 1px solid var(--gold-light); padding: 2rem 1.8rem;
+    background: var(--cream);
+  }
+  .campaign-brand {
+    font-family: var(--sans); font-size: 0.6rem; font-weight: 500;
+    letter-spacing: 0.25em; text-transform: uppercase; color: var(--gold);
+    margin-bottom: 0.8rem;
+  }
+  .campaign-line {
+    font-family: var(--serif); font-style: italic; font-size: 1.15rem;
+    font-weight: 400; color: var(--burgundy); line-height: 1.4; margin-bottom: 1rem;
+    border-left: 2px solid var(--gold); padding-left: 1rem;
+  }
+  .campaign-desc {
+    font-family: var(--sans); font-size: 0.75rem; font-weight: 400;
+    line-height: 1.7; color: var(--muted);
+  }
+
+  /* ─── COPY SECTION ──────────────────────────*/
+  #copy { background: var(--cream-dark); }
+  .copy-grid {
+    display: grid; grid-template-columns: 1fr 1fr; gap: 2rem;
+    margin-top: 3.5rem; max-width: 1000px; margin-left: auto; margin-right: auto;
+  }
+  .copy-card {
+    padding: 1.8rem; background: var(--cream); border-left: 2px solid var(--gold);
+  }
+  .copy-brand {
+    font-family: var(--sans); font-size: 0.6rem; font-weight: 500;
+    letter-spacing: 0.2em; text-transform: uppercase; color: var(--gold);
+    margin-bottom: 0.4rem;
+  }
+  .copy-headline {
+    font-family: var(--serif); font-style: italic; font-size: 1.1rem;
+    color: var(--burgundy); margin-bottom: 0.5rem; line-height: 1.4;
+  }
+  .copy-desc {
+    font-family: var(--sans); font-size: 0.73rem; color: var(--muted); line-height: 1.65;
+  }
+
+  /* ─── PUBLISHED ─────────────────────────────*/
+  #published { background: var(--cream); }
+  .published-grid {
+    display: grid; grid-template-columns: 1fr 1fr; gap: 3rem;
+    margin-top: 3.5rem; max-width: 1000px; margin-left: auto; margin-right: auto;
+  }
+  .pub-group-title {
+    font-family: var(--sans); font-size: 0.62rem; font-weight: 500;
+    letter-spacing: 0.25em; text-transform: uppercase; color: var(--gold);
+    margin-bottom: 1.2rem; border-bottom: 1px solid var(--gold-light); padding-bottom: 0.5rem;
+  }
+  .pub-item {
+    margin-bottom: 1.2rem;
+  }
+  .pub-title {
+    font-family: var(--serif); font-size: 0.95rem; font-weight: 400;
+    color: var(--burgundy); line-height: 1.4; margin-bottom: 0.2rem;
+  }
+  .pub-where {
+    font-family: var(--sans); font-size: 0.65rem; color: var(--muted);
+    letter-spacing: 0.05em;
+  }
+  .pub-where strong { color: var(--gold); }
+
+  /* ─── META RESULTS ──────────────────────────*/
+  #meta { background: var(--cream-dark); }
+  .meta-heading {
+    font-family: var(--serif); font-size: 1.5rem; font-weight: 400;
+    color: var(--burgundy); margin-bottom: 0.5rem;
+  }
+  .meta-subtext {
+    font-family: var(--sans); font-size: 0.78rem; color: var(--muted);
+    margin-bottom: 2.5rem; letter-spacing: 0.05em;
+  }
+  .meta-screenshots {
+    display: grid; grid-template-columns: 1fr 1fr; gap: 1.5rem;
+    max-width: 1000px; margin: 0 auto;
+  }
+  .meta-shot {
+    min-height: 280px; background: var(--cream);
+    border: 2px dashed rgba(201,168,76,0.3);
+    display: flex; flex-direction: column; align-items: center; justify-content: center;
+    gap: 0.6rem; padding: 2rem;
+  }
+  .meta-shot .ip-icon { font-size: 2.5rem; opacity: 0.3; }
+  .meta-shot p {
+    font-family: var(--sans); font-size: 0.65rem; letter-spacing: 0.2em;
+    text-transform: uppercase; text-align: center; color: var(--muted);
+  }
+  .meta-shot small { font-family: var(--sans); font-size: 0.6rem; color: rgba(122,96,96,0.5); }
+
+  /* ─── ACHIEVEMENTS ──────────────────────────*/
+  #achievements { background: var(--burgundy); }
+  #achievements .section-title { color: var(--gold-light); }
+  .achieve-grid {
+    display: grid; grid-template-columns: 1fr 1fr; gap: 2rem;
+    margin-top: 3.5rem; max-width: 900px; margin-left: auto; margin-right: auto;
+  }
+  .achieve-card {
+    padding: 2rem; background: rgba(255,255,255,0.04);
+    border: 1px solid rgba(201,168,76,0.2);
+  }
+  .achieve-year {
+    font-family: var(--sans); font-size: 0.62rem; font-weight: 500;
+    letter-spacing: 0.25em; text-transform: uppercase; color: var(--gold);
+    margin-bottom: 0.8rem;
+  }
+  .achieve-title {
+    font-family: var(--serif); font-size: 1.2rem; font-weight: 500;
+    color: var(--gold-light); margin-bottom: 0.6rem;
+  }
+  .achieve-desc {
+    font-family: var(--serif); font-size: 0.88rem; font-weight: 300;
+    line-height: 1.7; color: rgba(232,213,163,0.65);
+  }
+
+  /* ─── EXPERIENCE ────────────────────────────*/
+  #experience { background: var(--cream); }
+  .exp-list { max-width: 800px; margin: 3.5rem auto 0; }
+  .exp-item {
+    display: grid; grid-template-columns: 140px 1fr; gap: 2.5rem;
+    padding: 2rem 0; border-bottom: 1px solid var(--cream-dark);
+    align-items: start;
+  }
+  .exp-item:last-child { border-bottom: none; }
+  .exp-date {
+    font-family: var(--sans); font-size: 0.65rem; font-weight: 400;
+    letter-spacing: 0.1em; color: var(--muted); padding-top: 0.25rem;
+    text-align: right;
+  }
+  .exp-right {}
+  .exp-role {
+    font-family: var(--serif); font-size: 1.1rem; font-weight: 500;
+    color: var(--burgundy); margin-bottom: 0.2rem;
+  }
+  .exp-company {
+    font-family: var(--sans); font-size: 0.72rem; font-weight: 500;
+    letter-spacing: 0.12em; text-transform: uppercase; color: var(--gold);
+    margin-bottom: 0.5rem;
+  }
+  .exp-desc {
+    font-family: var(--serif); font-size: 0.88rem; font-weight: 300;
+    line-height: 1.7; color: var(--muted);
+  }
+  .exp-metrics { display: flex; gap: 1.5rem; margin-top: 0.8rem; flex-wrap: wrap; }
+  .exp-metric {
+    font-family: var(--sans); font-size: 0.65rem; color: var(--burgundy-mid);
+    display: flex; align-items: center; gap: 0.4rem;
+  }
+  .exp-metric strong { color: var(--gold); font-weight: 600; }
+  .edu-section {
+    max-width: 800px; margin: 3rem auto 0;
+    padding-top: 2rem; border-top: 1px solid var(--gold-light);
+  }
+  .edu-title {
+    font-family: var(--sans); font-size: 0.62rem; letter-spacing: 0.25em;
+    text-transform: uppercase; color: var(--gold); margin-bottom: 1.5rem;
+  }
+  .edu-items { display: flex; flex-direction: column; gap: 1rem; }
+  .edu-item {
+    display: grid; grid-template-columns: 140px 1fr; gap: 2.5rem;
+  }
+  .edu-deg {
+    font-family: var(--serif); font-size: 1rem; font-weight: 500;
+    color: var(--burgundy);
+  }
+  .edu-school {
+    font-family: var(--sans); font-size: 0.72rem; color: var(--muted);
+    margin-top: 0.2rem;
+  }
+
+  /* ─── PROCESS ───────────────────────────────*/
+  #process { background: var(--burgundy); }
+  #process .section-title { color: var(--gold-light); }
+  .process-quote {
+    font-family: var(--serif); font-style: italic; font-size: 1.1rem; font-weight: 300;
+    color: rgba(232,213,163,0.7); max-width: 600px; margin: 1.5rem auto 3.5rem;
+    text-align: center;
+  }
+  .process-steps {
+    display: grid; grid-template-columns: repeat(5, 1fr); gap: 0;
+    max-width: 1100px; margin: 0 auto;
+  }
+  .process-step {
+    padding: 2rem 1.5rem; text-align: center;
+    border-right: 1px solid rgba(201,168,76,0.15);
+    border-top: 1px solid rgba(201,168,76,0.15);
+  }
+  .process-step:last-child { border-right: none; }
+  .process-num {
+    font-family: var(--serif); font-size: 2.5rem; font-weight: 300;
+    color: rgba(201,168,76,0.25); line-height: 1; margin-bottom: 0.8rem;
+  }
+  .process-step-title {
+    font-family: var(--serif); font-size: 0.95rem; font-weight: 500;
+    color: var(--gold-light); margin-bottom: 0.5rem;
+  }
+  .process-step-desc {
+    font-family: var(--serif); font-size: 0.8rem; font-weight: 300;
+    line-height: 1.65; color: rgba(232,213,163,0.55);
+  }
+
+  /* ─── INTERESTS ─────────────────────────────*/
+  #interests { background: var(--cream-dark); }
+  .interests-grid {
+    display: grid; grid-template-columns: repeat(3, 1fr); gap: 1.5rem;
+    margin-top: 3rem; max-width: 1000px; margin-left: auto; margin-right: auto;
+  }
+  .interest-card {
+    padding: 1.8rem; background: var(--cream);
+    border-top: 2px solid var(--gold);
+  }
+  .interest-num {
+    font-family: var(--sans); font-size: 0.6rem; letter-spacing: 0.2em;
+    text-transform: uppercase; color: var(--gold); margin-bottom: 0.8rem;
+  }
+  .interest-name {
+    font-family: var(--serif); font-size: 1.05rem; font-weight: 500;
+    color: var(--burgundy); margin-bottom: 0.5rem;
+  }
+  .interest-desc {
+    font-family: var(--serif); font-size: 0.85rem; font-weight: 300;
+    line-height: 1.65; color: var(--muted);
+  }
+
+  /* ─── CONTACT ───────────────────────────────*/
+  #contact {
+    background: var(--burgundy); text-align: center; padding: 8rem 4rem;
+  }
+  .contact-headline {
+    font-family: var(--serif); font-size: clamp(2rem, 5vw, 3.5rem);
+    font-weight: 300; color: var(--gold-light); line-height: 1.15;
+    max-width: 700px; margin: 1.5rem auto 1rem;
+  }
+  .contact-closing {
+    font-family: var(--serif); font-style: italic; font-size: 1rem; font-weight: 300;
+    color: rgba(232,213,163,0.6); max-width: 550px; margin: 0 auto 3.5rem;
+  }
+  .contact-details {
+    display: flex; flex-direction: column; gap: 0.8rem; margin-bottom: 2.5rem;
+    align-items: center;
+  }
+  .contact-details a {
+    font-family: var(--sans); font-size: 0.82rem; font-weight: 400;
+    color: var(--gold-light); text-decoration: none; letter-spacing: 0.08em;
+    transition: color 0.3s;
+  }
+  .contact-details a:hover { color: var(--gold); }
+  .contact-location {
+    font-family: var(--sans); font-size: 0.65rem; font-weight: 400;
+    letter-spacing: 0.25em; text-transform: uppercase; color: rgba(201,168,76,0.5);
+    margin-bottom: 3rem;
+  }
+  .contact-btns { display: flex; gap: 1.2rem; justify-content: center; flex-wrap: wrap; }
+  footer {
+    background: var(--ink); text-align: center;
+    padding: 1.8rem;
+    font-family: var(--sans); font-size: 0.62rem; font-weight: 400;
+    letter-spacing: 0.15em; text-transform: uppercase;
+    color: rgba(201,168,76,0.35);
+  }
+
+  /* ─── TICKER ────────────────────────────────*/
+  .ticker-wrap {
+    background: var(--ink);
+    overflow: hidden;
+    padding: 0.9rem 0;
+    border-top: 1px solid rgba(201,168,76,0.2);
+    border-bottom: 1px solid rgba(201,168,76,0.2);
+  }
+  .ticker {
+    display: flex; gap: 2.5rem; width: max-content;
+    animation: ticker 30s linear infinite;
+  }
+  .ticker span {
+    font-family: var(--sans); font-size: 0.65rem; font-weight: 400;
+    letter-spacing: 0.2em; text-transform: uppercase;
+    color: rgba(201,168,76,0.6); white-space: nowrap; flex-shrink: 0;
+  }
+  @keyframes ticker { from { transform: translateX(0) } to { transform: translateX(-50%) } }
+
+  /* ─── DIFFERENTIATORS ────────────────────────*/
+  .differ-grid {
+    display: grid; grid-template-columns: 1fr 1fr;
+    gap: 1.5px; margin-top: 3.5rem;
+    max-width: 1100px; margin-left: auto; margin-right: auto;
+    background: rgba(201,168,76,0.15);
+  }
+  .differ-card {
+    background: rgba(255,255,255,0.04);
+    padding: 2.8rem 2.5rem;
+    transition: background 0.3s;
+  }
+  .differ-card:hover { background: rgba(201,168,76,0.08); }
+  .differ-num {
+    font-family: var(--sans); font-size: 0.62rem; font-weight: 500;
+    letter-spacing: 0.25em; text-transform: uppercase;
+    color: var(--gold); margin-bottom: 1rem;
+  }
+  .differ-title {
+    font-family: var(--serif); font-size: 1.3rem; font-weight: 500;
+    color: var(--gold-light); margin-bottom: 0.8rem; line-height: 1.3;
+  }
+  .differ-desc {
+    font-family: var(--serif); font-size: 0.92rem; font-weight: 300;
+    line-height: 1.75; color: rgba(232,213,163,0.65);
+  }
+
+  /* ─── PS NOTE ────────────────────────────────*/
+  .ps-note {
+    max-width: 800px; margin: 3rem auto 0;
+    padding: 1.8rem 2rem;
+    border: 1px solid var(--gold-light);
+    background: var(--cream-dark);
+    border-left: 3px solid var(--gold);
+  }
+  .ps-note p {
+    font-family: var(--serif); font-style: italic; font-size: 0.95rem;
+    font-weight: 300; line-height: 1.8; color: var(--burgundy-mid);
+  }
+  .ps-note strong { font-style: normal; color: var(--burgundy); font-weight: 600; }
+
+  /* ─── PUBLISHED ──────────────────────────────*/
+  #published { background: var(--cream); }
+  .published-grid {
+    display: grid; grid-template-columns: 1fr 1fr; gap: 3rem;
+    margin-top: 3.5rem; max-width: 1000px; margin-left: auto; margin-right: auto;
+  }
+  .pub-group-title {
+    font-family: var(--sans); font-size: 0.62rem; font-weight: 500;
+    letter-spacing: 0.25em; text-transform: uppercase; color: var(--gold);
+    margin-bottom: 1.2rem; border-bottom: 1px solid var(--gold-light); padding-bottom: 0.5rem;
+  }
+  .pub-item { margin-bottom: 1.2rem; }
+  .pub-title {
+    font-family: var(--serif); font-size: 0.95rem; font-weight: 400;
+    color: var(--burgundy); line-height: 1.4; margin-bottom: 0.2rem;
+  }
+  .pub-where {
+    font-family: var(--sans); font-size: 0.65rem; color: var(--muted);
+    letter-spacing: 0.05em;
+  }
+  .pub-where strong { color: var(--gold); }
+
+  /* ─── COPY ───────────────────────────────────*/
+  #copy { background: var(--cream-dark); }
+  .copy-grid {
+    display: grid; grid-template-columns: 1fr 1fr; gap: 2rem;
+    margin-top: 3.5rem; max-width: 1000px; margin-left: auto; margin-right: auto;
+  }
+  .copy-card {
+    padding: 1.8rem; background: var(--cream); border-left: 2px solid var(--gold);
+  }
+  .copy-brand {
+    font-family: var(--sans); font-size: 0.6rem; font-weight: 500;
+    letter-spacing: 0.2em; text-transform: uppercase; color: var(--gold);
+    margin-bottom: 0.4rem;
+  }
+  .copy-headline {
+    font-family: var(--serif); font-style: italic; font-size: 1.1rem;
+    color: var(--burgundy); margin-bottom: 0.5rem; line-height: 1.4;
+  }
+  .copy-desc {
+    font-family: var(--sans); font-size: 0.73rem; color: var(--muted); line-height: 1.65;
+  }
+
+  /* ─── MOCK CAMPAIGNS ─────────────────────────*/
+  .campaign-cards {
+    display: grid; grid-template-columns: 1fr 1fr 1fr; gap: 1.5rem;
+    margin-top: 3.5rem; max-width: 1100px; margin-left: auto; margin-right: auto;
+  }
+  .campaign-card {
+    border: 1px solid var(--gold-light); padding: 2rem 1.8rem; background: var(--cream);
+  }
+  .campaign-brand {
+    font-family: var(--sans); font-size: 0.6rem; font-weight: 500;
+    letter-spacing: 0.25em; text-transform: uppercase; color: var(--gold);
+    margin-bottom: 0.8rem;
+  }
+  .campaign-line {
+    font-family: var(--serif); font-style: italic; font-size: 1.15rem;
+    font-weight: 400; color: var(--burgundy); line-height: 1.4; margin-bottom: 1rem;
+    border-left: 2px solid var(--gold); padding-left: 1rem;
+  }
+  .campaign-desc {
+    font-family: var(--sans); font-size: 0.75rem; font-weight: 400;
+    line-height: 1.7; color: var(--muted);
+  }
+
+  /* ─── META ───────────────────────────────────*/
+  #meta { background: var(--cream-dark); }
+  .meta-heading {
+    font-family: var(--serif); font-size: 1.5rem; font-weight: 400;
+    color: var(--burgundy); margin-bottom: 0.5rem;
+  }
+  .meta-subtext {
+    font-family: var(--sans); font-size: 0.78rem; color: var(--muted);
+    margin-bottom: 2.5rem; letter-spacing: 0.05em;
+  }
+  .meta-screenshots {
+    display: grid; grid-template-columns: 1fr 1fr; gap: 1.5rem;
+    max-width: 1000px; margin: 0 auto;
+  }
+  .meta-shot {
+    min-height: 280px; background: var(--cream);
+    border: 2px dashed rgba(201,168,76,0.3);
+    display: flex; flex-direction: column; align-items: center; justify-content: center;
+    gap: 0.6rem; padding: 2rem;
+  }
+  .meta-shot .ip-icon { font-size: 2.5rem; opacity: 0.3; }
+  .meta-shot p {
+    font-family: var(--sans); font-size: 0.65rem; letter-spacing: 0.2em;
+    text-transform: uppercase; text-align: center; color: var(--muted);
+  }
+  .meta-shot small { font-family: var(--sans); font-size: 0.6rem; color: rgba(122,96,96,0.5); }
+
+  /* ─── DESIGN WORK ────────────────────────────*/
+  #design { background: var(--burgundy); }
+  #design .section-title { color: var(--gold-light); }
+  #design .section-label { color: var(--gold); }
+  .design-cols {
+    display: grid; grid-template-columns: 1fr 1fr 1fr; gap: 2rem;
+    margin-top: 3.5rem; max-width: 1100px; margin-left: auto; margin-right: auto;
+  }
+  .design-col {
+    background: rgba(255,255,255,0.04); border: 1px solid rgba(201,168,76,0.2); padding: 0;
+  }
+  .design-col-img {
+    width: 100%; aspect-ratio: 4/3;
+    background: rgba(255,255,255,0.06); border-bottom: 1px solid rgba(201,168,76,0.15);
+    display: flex; flex-direction: column; align-items: center; justify-content: center;
+    gap: 0.5rem; padding: 1rem;
+  }
+  .design-col-img .ip-icon { font-size: 2rem; opacity: 0.3; }
+  .design-col-img p {
+    font-family: var(--sans); font-size: 0.6rem; letter-spacing: 0.2em;
+    text-transform: uppercase; text-align: center; color: rgba(232,213,163,0.4);
+  }
+  .design-col-body { padding: 1.5rem; }
+  .design-col-name {
+    font-family: var(--serif); font-size: 1.1rem; font-weight: 500;
+    color: var(--gold-light); margin-bottom: 0.3rem;
+  }
+  .design-col-type {
+    font-family: var(--sans); font-size: 0.6rem; font-weight: 500;
+    letter-spacing: 0.15em; text-transform: uppercase; color: var(--gold); margin-bottom: 0.8rem;
+  }
+  .design-col-desc {
+    font-family: var(--serif); font-size: 0.85rem; font-weight: 300;
+    line-height: 1.65; color: rgba(232,213,163,0.65);
+  }
+
+  /* ─── ACHIEVEMENTS ───────────────────────────*/
+  #achievements { background: var(--burgundy); }
+  #achievements .section-title { color: var(--gold-light); }
+  .achieve-grid {
+    display: grid; grid-template-columns: 1fr 1fr; gap: 2rem;
+    margin-top: 3.5rem; max-width: 900px; margin-left: auto; margin-right: auto;
+  }
+  .achieve-card {
+    padding: 2rem; background: rgba(255,255,255,0.04); border: 1px solid rgba(201,168,76,0.2);
+  }
+  .achieve-year {
+    font-family: var(--sans); font-size: 0.62rem; font-weight: 500;
+    letter-spacing: 0.25em; text-transform: uppercase; color: var(--gold); margin-bottom: 0.8rem;
+  }
+  .achieve-title {
+    font-family: var(--serif); font-size: 1.2rem; font-weight: 500;
+    color: var(--gold-light); margin-bottom: 0.6rem;
+  }
+  .achieve-desc {
+    font-family: var(--serif); font-size: 0.88rem; font-weight: 300;
+    line-height: 1.7; color: rgba(232,213,163,0.65);
+  }
+  @media (max-width: 900px) {
+    nav { padding: 1rem 1.5rem; }
+    .nav-links { display: none; }
+    section { padding: 4rem 1.5rem; }
+    .about-grid { grid-template-columns: 1fr; gap: 2.5rem; }
+    .services-grid { grid-template-columns: 1fr; gap: 2rem; }
+    .cs-body.open { grid-template-columns: 1fr; }
+    .design-cols { grid-template-columns: 1fr; }
+    .campaign-cards { grid-template-columns: 1fr; }
+    .copy-grid { grid-template-columns: 1fr; }
+    .published-grid { grid-template-columns: 1fr; }
+    .meta-screenshots { grid-template-columns: 1fr; }
+    .achieve-grid { grid-template-columns: 1fr; }
+    .exp-item { grid-template-columns: 1fr; gap: 0.5rem; }
+    .exp-date { text-align: left; }
+    .edu-item { grid-template-columns: 1fr; gap: 0.3rem; }
+    .process-steps { grid-template-columns: 1fr; }
+    .process-step { border-right: none; }
+    .differ-grid { grid-template-columns: 1fr; }
+    .interests-grid { grid-template-columns: 1fr; }
+    .image-grid { grid-template-columns: 1fr; }
+    .cs-results { grid-template-columns: 1fr 1fr; }
+  }
+  /* ─── PERF CARDS ─────────────────────────────*/
+  .perf-brand-block { max-width: 1100px; margin: 3rem auto 0; }
+  .perf-brand-label {
+    font-family: var(--sans); font-size: 0.65rem; font-weight: 500;
+    letter-spacing: 0.25em; text-transform: uppercase;
+    color: var(--gold); margin-bottom: 1.5rem;
+    padding-bottom: 0.6rem; border-bottom: 1px solid var(--gold-light);
+    display: flex; align-items: center; gap: 0.8rem;
+  }
+  .perf-brand-label::before { content: ''; display: block; width: 1.5rem; height: 1px; background: var(--gold); }
+  .perf-grid {
+    display: grid; grid-template-columns: repeat(3, 1fr); gap: 1rem; margin-bottom: 1.5rem;
+  }
+  .perf-card {
+    padding: 1.5rem 1.2rem; border: 1px solid var(--gold-light);
+  }
+  .perf-highlight { background: var(--cream); }
+  .perf-stat { background: var(--burgundy); }
+  .perf-num {
+    font-family: var(--serif); font-size: 2.2rem; font-weight: 300;
+    color: var(--gold); line-height: 1; margin-bottom: 0.4rem;
+  }
+  .perf-title {
+    font-family: var(--serif); font-size: 0.95rem; font-weight: 500;
+    color: var(--burgundy); margin-bottom: 0.25rem;
+  }
+  .perf-sub {
+    font-family: var(--sans); font-size: 0.65rem; color: var(--muted); line-height: 1.5;
+  }
+  .perf-stat-row {
+    display: flex; justify-content: space-between; align-items: center;
+    padding: 0.35rem 0; border-bottom: 1px solid rgba(201,168,76,0.15);
+  }
+  .perf-stat-row:last-child { border-bottom: none; }
+  .perf-stat-label {
+    font-family: var(--sans); font-size: 0.65rem; color: rgba(232,213,163,0.6);
+    letter-spacing: 0.05em;
+  }
+  .perf-stat-val {
+    font-family: var(--sans); font-size: 0.72rem; font-weight: 500;
+    color: var(--gold); letter-spacing: 0.05em;
+  }
+  .perf-insight {
+    font-family: var(--serif); font-style: italic; font-size: 0.95rem;
+    font-weight: 300; line-height: 1.75; color: var(--burgundy-mid);
+    border-left: 2px solid var(--gold); padding: 0.8rem 1.2rem;
+    background: var(--cream-dark); margin-bottom: 1.5rem;
+  }
+  .perf-img-slot {
+    min-height: 200px; background: var(--cream);
+    border: 2px dashed rgba(201,168,76,0.3);
+    display: flex; flex-direction: column; align-items: center; justify-content: center;
+    gap: 0.5rem; padding: 2rem; text-align: center;
+  }
+  .perf-img-slot .ip-icon { font-size: 2rem; opacity: 0.3; }
+  .perf-img-slot p {
+    font-family: var(--sans); font-size: 0.65rem; letter-spacing: 0.18em;
+    text-transform: uppercase; color: var(--muted);
+  }
+  .perf-img-slot small { font-family: var(--sans); font-size: 0.6rem; color: rgba(122,96,96,0.5); }
+  @media (max-width: 900px) { .perf-grid { grid-template-columns: 1fr 1fr; } }
+  @media (max-width: 600px) { .perf-grid { grid-template-columns: 1fr; } }
+
+</style>
+</head>
+<body>
+
+<!-- ─── NAV ────────────────────────────────── -->
+<nav>
+  <a class="nav-logo" href="#hero">Anuradha Tripathi</a>
+  <ul class="nav-links">
+    <li><a href="#about">About</a></li>
+    <li><a href="#work">Work</a></li>
+    <li><a href="#campaigns">Campaigns</a></li>
+    <li><a href="#experience">Experience</a></li>
+    <li><a href="#contact">Contact</a></li>
+  </ul>
+  <a class="nav-cta" href="#contact">Hire Me</a>
+</nav>
+
+<!-- ─── HERO ───────────────────────────────── -->
+<section id="hero">
+  <div class="hero-eyebrow">Portfolio · 2026</div>
+  <h1 class="hero-name">Anuradha Tripathi</h1>
+  <p class="hero-sub">Marketing &amp; Brand &nbsp;·&nbsp; Content &nbsp;·&nbsp; Design</p>
+  <div class="hero-line"></div>
+  <p class="hero-tagline"><em>I make brands feel like something.</em></p>
+  <div class="hero-ctas">
+    <a class="btn-primary" href="#work">See My Work</a>
+    <a class="btn-outline" href="#contact">Let's Talk</a>
+  </div>
+  <div class="hero-scroll">Scroll</div>
+</section>
+
+<!-- ─── TICKER ──────────────────────────────── -->
+<div class="ticker-wrap">
+  <div class="ticker">
+    <span>Brand Strategy</span><span>·</span>
+    <span>Content Creation</span><span>·</span>
+    <span>Campaign Planning</span><span>·</span>
+    <span>Organic Social</span><span>·</span>
+    <span>Influencer Marketing</span><span>·</span>
+    <span>Copywriting</span><span>·</span>
+    <span>Brand Storytelling</span><span>·</span>
+    <span>GTM Strategy</span><span>·</span>
+    <span>SMS Marketing</span><span>·</span>
+    <span>Event Marketing</span><span>·</span>
+    <span>Brand Identity</span><span>·</span>
+    <span>Graphic Design</span><span>·</span>
+    <span>Brand Strategy</span><span>·</span>
+    <span>Content Creation</span><span>·</span>
+    <span>Campaign Planning</span><span>·</span>
+    <span>Organic Social</span><span>·</span>
+    <span>Influencer Marketing</span><span>·</span>
+    <span>Copywriting</span><span>·</span>
+    <span>Brand Storytelling</span><span>·</span>
+    <span>GTM Strategy</span><span>·</span>
+  </div>
+</div>
+
+<!-- ─── WHO I AM ──────────────────────────── -->
+<section id="about">
+  <div class="about-grid">
+    <div class="about-left">
+      <div class="about-photo">
+        <!-- TO ADD: replace this placeholder with <img src="your-photo.jpg" alt="Anuradha Tripathi" style="display:block"> -->
+        <div class="photo-placeholder">
+          <span>◎</span>
+          Add your photo here<br>
+          <small>Replace src="your-photo.jpg"</small>
+        </div>
+      </div>
+      <div class="about-contact-pills">
+        <div class="pill">atripathi.content@gmail.com</div>
+        <div class="pill">+91 835 606 9106</div>
+        <div class="pill">Mumbai · Dubai · Global</div>
+        <div class="pill">linkedin.com/in/anuradha-tripathi</div>
+      </div>
+    </div>
+    <div class="about-right">
+      <div class="section-label">Who I Am</div>
+      <h2 class="section-title">A marketer who<br><em>actually gets people</em></h2>
+      <div style="margin:1.5rem 0">
+        <div class="about-years">8 <span>yrs</span></div>
+        <div class="about-years-label">Across Beauty · Fintech · F&amp;B · Events · Tech · Media</div>
+      </div>
+      <p class="about-body">
+        I've always believed that the best marketing doesn't feel like marketing. It feels like <strong>truth</strong> — delivered at the right moment, in the right voice.
+      </p>
+      <p class="about-body">
+        My background spans beauty, F&amp;B, fintech, tech, events, and media, which means I've had to think differently for wildly different audiences. I'm equally comfortable building strategy decks and writing Instagram captions at 11pm. I can run an influencer campaign and walk you through your content calendar.
+      </p>
+      <div class="about-philosophy">
+        <p>"The brand that understands its audience better than anyone else always wins. Not the biggest budget. The most human one."</p>
+      </div>
+      <div class="about-tags">
+        <span class="tag">Brand Strategy</span><span class="tag">Campaign Planning</span>
+        <span class="tag">Content Creation</span><span class="tag">Influencer Marketing</span>
+        <span class="tag">Copywriting</span><span class="tag">Organic Social</span>
+        <span class="tag">GTM Strategy</span><span class="tag">SMS Marketing</span>
+        <span class="tag">Google Analytics</span><span class="tag">Event Marketing</span>
+        <span class="tag">Graphic Design</span><span class="tag">Brand Identity</span>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ─── NUMBERS ────────────────────────────── -->
+<section id="numbers">
+  <div class="section-label" style="justify-content:center">Results</div>
+  <h2 class="section-title" style="color:var(--gold-light);text-align:center">Numbers That Matter</h2>
+  <div class="metrics-grid">
+    <div class="metric-card">
+      <div class="metric-num">+18%</div>
+      <div class="metric-label">Revenue Increase</div>
+      <div class="metric-source">Sugar Beauty Lounge</div>
+    </div>
+    <div class="metric-card">
+      <div class="metric-num">800K+</div>
+      <div class="metric-label">Organic Reach</div>
+      <div class="metric-source">InstaReM · Zero paid budget</div>
+    </div>
+    <div class="metric-card">
+      <div class="metric-num">+40%</div>
+      <div class="metric-label">Organic User Growth</div>
+      <div class="metric-source">Sixthsense / InstaReM</div>
+    </div>
+    <div class="metric-card">
+      <div class="metric-num">+55%</div>
+      <div class="metric-label">Revenue from Content</div>
+      <div class="metric-source">InstaReM Campaign</div>
+    </div>
+    <div class="metric-card">
+      <div class="metric-num">+30%</div>
+      <div class="metric-label">New Customer Acquisition</div>
+      <div class="metric-source">Assurekit Technologies</div>
+    </div>
+    <div class="metric-card">
+      <div class="metric-num">60%</div>
+      <div class="metric-label">Customer Retention</div>
+      <div class="metric-source">Assurekit Technologies</div>
+    </div>
+    <div class="metric-card">
+      <div class="metric-num">+25%</div>
+      <div class="metric-label">Social Engagement</div>
+      <div class="metric-source">Multiple Brands</div>
+    </div>
+    <div class="metric-card">
+      <div class="metric-num">+15%</div>
+      <div class="metric-label">SMS Conversion Lift</div>
+      <div class="metric-source">Sugar Beauty Lounge</div>
+    </div>
+  </div>
+</section>
+
+<!-- ─── WHAT I DO ────────────────────────────-->
+<section id="services">
+  <div class="section-label">Services</div>
+  <h2 class="section-title">What I Do</h2>
+  <div class="services-grid">
+    <div class="service-col">
+      <div class="service-col-type">01</div>
+      <div class="service-col-title">Marketing &amp; Brand</div>
+      <div class="service-col-sub">Strategy &amp; Growth</div>
+      <div class="service-items">
+        <div class="service-item">Brand Strategy</div>
+        <div class="service-item">Campaign Planning</div>
+        <div class="service-item">Influencer Marketing</div>
+        <div class="service-item">Event Marketing</div>
+        <div class="service-item">GTM Strategy</div>
+        <div class="service-item">SMS Marketing</div>
+        <div class="service-item">Agency Management</div>
+        <div class="service-item">Market Research</div>
+        <div class="service-item">Google Analytics</div>
+        <div class="service-item">PR &amp; Publications</div>
+      </div>
+    </div>
+    <div class="service-col">
+      <div class="service-col-type">02</div>
+      <div class="service-col-title">Content &amp; Design</div>
+      <div class="service-col-sub">Creation &amp; Identity</div>
+      <div class="service-items">
+        <div class="service-item">Content Creation &amp; Copywriting</div>
+        <div class="service-item">Organic Social Media</div>
+        <div class="service-item">Graphic Design</div>
+        <div class="service-item">Brand Identity</div>
+        <div class="service-item">Print &amp; Marketing Collateral</div>
+        <div class="service-item">Brand Guidelines</div>
+        <div class="service-item">Brand Positioning</div>
+        <div class="service-item">Video Scripts</div>
+        <div class="service-item">Website Copy</div>
+        <div class="service-item">Ghostwriting</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ─── CASE STUDIES ─────────────────────────-->
+<section id="work">
+  <div class="section-label">Selected Work</div>
+  <h2 class="section-title">Case <em>Studies</em></h2>
+  <p class="work-intro">Real challenges, genuine thinking, and outcomes that actually moved the needle.</p>
+
+  <!-- CS 01 -->
+  <div class="case-study">
+    <div class="cs-header" onclick="toggleCS(this)">
+      <div class="cs-num">01</div>
+      <div class="cs-title-block">
+        <div class="cs-title">Sugar Beauty Lounge</div>
+        <div class="cs-meta">
+          <span>Marketing &amp; Brand Manager</span>
+          <span>Dubai, UAE</span>
+          <span>2024 – 2026</span>
+          <span>Beauty &amp; Lifestyle</span>
+        </div>
+        <div class="cs-tags">
+          <span class="cs-tag">Seasonal Campaigns</span>
+          <span class="cs-tag">SMS Marketing</span>
+          <span class="cs-tag">Influencer Marketing</span>
+          <span class="cs-tag">In-House Design</span>
+        </div>
+      </div>
+      <div class="cs-arrow">↓</div>
+    </div>
+    <div class="cs-body" id="cs1">
+      <div>
+        <div class="cs-section-label">The Challenge</div>
+        <p class="cs-text">A premium beauty lounge in Dubai with a loyal base — but inconsistent content, no clear seasonal campaign rhythm, and SMS campaigns that felt like spam. The brand needed to feel like a destination, not just a booking.</p>
+        <div class="cs-section-label">What I Did</div>
+        <p class="cs-text">Built a seasonal content strategy tied to cultural moments. Reimagined SMS from broadcast to personalised first-visit nurture sequences. Handpicked influencer collaborations for brand fit over follower count — including @je_suis_la_maman_dantoine (18.3K) and @aiamwa (58.5K). Created in-salon open day experiences with Kerastase, OPI, and MORE Korean Beauty. All in-house graphic design: static posts, banners, offer posters, event menus, brochures, POS materials.</p>
+      </div>
+      <div>
+        <div class="cs-section-label">Results</div>
+        <div class="cs-results">
+          <div class="cs-result"><div class="cs-result-num">+18%</div><div class="cs-result-label">Revenue</div></div>
+          <div class="cs-result"><div class="cs-result-num">+25%</div><div class="cs-result-label">Social Engagement</div></div>
+          <div class="cs-result"><div class="cs-result-num">+15%</div><div class="cs-result-label">SMS Conversion</div></div>
+          <div class="cs-result"><div class="cs-result-num">+20%</div><div class="cs-result-label">Monthly Bookings</div></div>
+        </div>
+        <div class="cs-section-label">Influencers</div>
+        <div class="cs-influencers">
+          <strong>@je_suis_la_maman_dantoine</strong> — 18.3K<br>
+          <strong>@aiamwa</strong> — 58.5K
+        </div>
+      </div>
+      <div class="cs-image-area">
+        <div class="cs-section-label">Campaign Visuals</div>
+        <div class="image-grid">
+          <div class="image-placeholder">
+            <div class="ip-icon">◻</div>
+            <p>Sugar Beauty Campaign Image</p>
+            <small>Add: src="sugar-campaign-1.jpg"</small>
+          </div>
+          <div class="image-placeholder">
+            <div class="ip-icon">◻</div>
+            <p>In-Store Event / Design Work</p>
+            <small>Add: src="sugar-event.jpg"</small>
+          </div>
+          <div class="image-placeholder">
+            <div class="ip-icon">◻</div>
+            <p>SMS / Influencer Results</p>
+            <small>Add: src="sugar-results.jpg"</small>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- CS 02 -->
+  <div class="case-study">
+    <div class="cs-header" onclick="toggleCS(this)">
+      <div class="cs-num">02</div>
+      <div class="cs-title-block">
+        <div class="cs-title">Yogashi Bakery</div>
+        <div class="cs-meta">
+          <span>Marketing &amp; Brand Strategist</span>
+          <span>F&amp;B · Dubai</span>
+        </div>
+        <div class="cs-tags">
+          <span class="cs-tag">Brand Identity from Scratch</span>
+          <span class="cs-tag">Seasonal Content</span>
+          <span class="cs-tag">Lead Gen</span>
+        </div>
+      </div>
+      <div class="cs-arrow">↓</div>
+    </div>
+    <div class="cs-body" id="cs2">
+      <div>
+        <div class="cs-section-label">The Work</div>
+        <p class="cs-text">Built the entire brand from scratch — logo, packaging, menu, brand guidelines, reheat manual, recipe book. Then brought it to market with a seasonal content calendar, community-first breakfast launch, and a Ramadan campaign that used Facebook to WhatsApp lead gen with a fresh photoshoot.</p>
+        <div class="cs-section-label">Influencers</div>
+        <div class="cs-influencers">
+          <strong>@justfooddxb</strong> — 221K+<br>
+          <strong>@sallycakeaway</strong> — 144K+<br>
+          <strong>@anabushbush</strong> — 87.8K
+        </div>
+        <br>
+        <div class="cs-section-label">Full Case Study</div>
+        <p class="cs-text"><a href="https://soudcoh.com/case-study/yogashi-bakery" target="_blank" style="color:var(--gold)">soudcoh.com/case-study/yogashi-bakery →</a></p>
+      </div>
+      <div>
+        <div class="cs-section-label">Brand Deliverables</div>
+        <p class="cs-text">Logo · Packaging · Menu · Brand Guidelines · Reheat Manual · Recipe Book · Marketing Collateral · Seasonal Campaigns · Facebook–WhatsApp Lead Gen · Influencer Strategy</p>
+      </div>
+      <div class="cs-image-area">
+        <div class="cs-section-label">Campaign &amp; Brand Visuals</div>
+        <div class="image-grid">
+          <div class="image-placeholder">
+            <div class="ip-icon">◻</div>
+            <p>Yogashi Brand Identity / Packaging</p>
+            <small>Add: src="yogashi-brand.jpg"</small>
+          </div>
+          <div class="image-placeholder">
+            <div class="ip-icon">◻</div>
+            <p>Ramadan Campaign</p>
+            <small>Add: src="yogashi-ramadan.jpg"</small>
+          </div>
+          <div class="image-placeholder">
+            <div class="ip-icon">◻</div>
+            <p>Breakfast Launch Content</p>
+            <small>Add: src="yogashi-breakfast.jpg"</small>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- CS 03 -->
+  <div class="case-study">
+    <div class="cs-header" onclick="toggleCS(this)">
+      <div class="cs-num">03</div>
+      <div class="cs-title-block">
+        <div class="cs-title">InstaReM Global</div>
+        <div class="cs-meta">
+          <span>Brand Operations Coordinator · Sixthsense Communications</span>
+          <span>Apr – Dec 2021</span>
+          <span>Fintech</span>
+        </div>
+        <div class="cs-tags">
+          <span class="cs-tag">800K+ Organic Reach</span>
+          <span class="cs-tag">Zero Paid Budget</span>
+          <span class="cs-tag">Content Strategy</span>
+        </div>
+      </div>
+      <div class="cs-arrow">↓</div>
+    </div>
+    <div class="cs-body" id="cs3">
+      <div>
+        <div class="cs-section-label">The Milestone</div>
+        <p class="cs-text">800,000+ people reached organically in one month. Zero paid budget. A purely organic content strategy — articles, social posts, digital content — working together across channels.</p>
+        <div class="cs-section-label">Also Worked On</div>
+        <p class="cs-text">BYJU'S · HUL · ITC · Native Milk</p>
+      </div>
+      <div>
+        <div class="cs-section-label">Results</div>
+        <div class="cs-results">
+          <div class="cs-result"><div class="cs-result-num">800K+</div><div class="cs-result-label">Organic Reach (1 month)</div></div>
+          <div class="cs-result"><div class="cs-result-num">+40%</div><div class="cs-result-label">Organic User Growth</div></div>
+          <div class="cs-result"><div class="cs-result-num">+55%</div><div class="cs-result-label">Revenue from Content</div></div>
+          <div class="cs-result"><div class="cs-result-num">Zero</div><div class="cs-result-label">Paid Budget</div></div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- CS 04 - Assurekit -->
+  <div class="case-study">
+    <div class="cs-header" onclick="toggleCS(this)">
+      <div class="cs-num">04</div>
+      <div class="cs-title-block">
+        <div class="cs-title">Assurekit Technologies</div>
+        <div class="cs-meta">
+          <span>Assistant Marketing Manager</span>
+          <span>Jul 2022 – Jun 2023</span>
+          <span>Tech / Insurtech</span>
+        </div>
+        <div class="cs-tags">
+          <span class="cs-tag">Brand Building</span>
+          <span class="cs-tag">Customer Retention</span>
+          <span class="cs-tag">B2B Content</span>
+        </div>
+      </div>
+      <div class="cs-arrow">↓</div>
+    </div>
+    <div class="cs-body" id="cs4">
+      <div>
+        <div class="cs-section-label">The Challenge</div>
+        <p class="cs-text">Insurtech is not the most naturally "exciting" category to market. But that's exactly why brand storytelling matters most in dry spaces. Built strategies that made the brand recognisable, drove acquisition, and kept existing customers engaged.</p>
+        <div class="cs-section-label">Key Copy Direction</div>
+        <p class="cs-text"><em style="color:var(--burgundy-mid)">"Your business is covered. Really."</em> — Clear, no jargon, B2B-first copy that earned trust instead of talking in circles.</p>
+      </div>
+      <div>
+        <div class="cs-section-label">Results</div>
+        <div class="cs-results">
+          <div class="cs-result"><div class="cs-result-num">+30%</div><div class="cs-result-label">New Customer Acquisition</div></div>
+          <div class="cs-result"><div class="cs-result-num">60%</div><div class="cs-result-label">Customer Retention</div></div>
+        </div>
+        <p class="cs-text">Consistent messaging across digital, PR, and event channels. Strengthened brand recognition in a competitive insurtech landscape.</p>
+      </div>
+    </div>
+  </div>
+  <!-- CS 05 — NextSAA -->
+  <div class="case-study">
+    <div class="cs-header" onclick="toggleCS(this)">
+      <div class="cs-num">05</div>
+      <div class="cs-title-block">
+        <div class="cs-title">NextSAA Services</div>
+        <div class="cs-meta">
+          <span>Lead Marketing Manager</span>
+          <span>Jul 2023 – Jan 2024</span>
+          <span>Multi-client</span>
+        </div>
+        <div class="cs-tags">
+          <span class="cs-tag">Multi-Client Strategy</span>
+          <span class="cs-tag">Brand Identity</span>
+          <span class="cs-tag">GTM Planning</span>
+          <span class="cs-tag">Agency Management</span>
+        </div>
+      </div>
+      <div class="cs-arrow">↓</div>
+    </div>
+    <div class="cs-body" id="cs5">
+      <div>
+        <div class="cs-section-label">The Work</div>
+        <p class="cs-text">Managing marketing for multiple clients simultaneously is a discipline. You need systems, not just creativity. Built tailored brand identities and social strategies per client, supervised the agency, ran GTM planning, and consistently delivered measurable growth — keeping each brand feeling distinct even from the same desk.</p>
+        <div class="cs-section-label">Website Copy</div>
+        <p class="cs-text">Wrote and structured the full website copy end to end for NextSAA Services — brand voice, product pages, and all supporting digital content.<br><a href="https://nextsaa.com/" target="_blank" style="color:var(--gold)">nextsaa.com ↗</a></p>
+      </div>
+      <div>
+        <div class="cs-section-label">Results</div>
+        <div class="cs-results">
+          <div class="cs-result"><div class="cs-result-num">20%+</div><div class="cs-result-label">Follower Growth Across Clients</div></div>
+          <div class="cs-result"><div class="cs-result-num">+25%</div><div class="cs-result-label">Engagement Increase</div></div>
+        </div>
+        <p class="cs-text">Cross-functional GTM strategies for new product launches. Brand presence expanded into new markets. Agency output supervised end to end.</p>
+      </div>
+      <div class="cs-image-area">
+        <div class="cs-section-label">Visuals</div>
+        <div class="image-grid">
+          <div class="image-placeholder">
+            <div class="ip-icon">◻</div>
+            <p>Campaign or Brand Visual</p>
+            <small>Add: src="nextsaa-1.jpg"</small>
+          </div>
+          <div class="image-placeholder">
+            <div class="ip-icon">◻</div>
+            <p>Social Content / GTM</p>
+            <small>Add: src="nextsaa-2.jpg"</small>
+          </div>
+          <div class="image-placeholder">
+            <div class="ip-icon">◻</div>
+            <p>Website Screenshot</p>
+            <small>Add: src="nextsaa-site.jpg"</small>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+<section id="design">
+  <div class="section-label">Visual Identity</div>
+  <h2 class="section-title" style="color:var(--gold-light)">Design Work</h2>
+  <div class="design-cols">
+    <div class="design-col">
+      <div class="design-col-img">
+        <!-- Add image: <img src="cinna-bunny.jpg" style="width:100%;height:100%;object-fit:cover"> -->
+        <div class="ip-icon">◻</div>
+        <p>Add: src="cinna-bunny.jpg"</p>
+      </div>
+      <div class="design-col-body">
+        <div class="design-col-type">Pre-Launch · Coming Soon</div>
+        <div class="design-col-name">Cinna Bunny</div>
+        <p class="design-col-desc">Pre-launch brand identity — logo, personality, visual direction, colour palette. Not yet launched.</p>
+      </div>
+    </div>
+    <div class="design-col">
+      <div class="design-col-img">
+        <!-- Add image: <img src="yogashi-design.jpg" style="width:100%;height:100%;object-fit:cover"> -->
+        <div class="ip-icon">◻</div>
+        <p>Add: src="yogashi-design.jpg"</p>
+      </div>
+      <div class="design-col-body">
+        <div class="design-col-type">Full Visual Identity · F&amp;B</div>
+        <div class="design-col-name">Yogashi Bakery</div>
+        <p class="design-col-desc">Logo, packaging, menu, brand guidelines, reheat manual, recipe book, and all marketing collateral.</p>
+      </div>
+    </div>
+    <div class="design-col">
+      <div class="design-col-img">
+        <!-- Add image: <img src="sugar-design.jpg" style="width:100%;height:100%;object-fit:cover"> -->
+        <div class="ip-icon">◻</div>
+        <p>Add: src="sugar-design.jpg"</p>
+      </div>
+      <div class="design-col-body">
+        <div class="design-col-type">2 Years In-House · Beauty</div>
+        <div class="design-col-name">Sugar Beauty Lounge</div>
+        <p class="design-col-desc">Static posts, banners, offer posters, event menus, brochures, and all POS materials — all in-house.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ─── MOCK CAMPAIGNS ───────────────────────-->
+<section id="campaigns">
+  <div class="section-label">Original Concepts</div>
+  <h2 class="section-title">Mock <em>Campaigns</em></h2>
+  <p class="work-intro" style="margin-top:1rem">Three original strategic concepts showing how I think about brands, emotion, and message.</p>
+  <div class="campaign-cards">
+    <div class="campaign-card">
+      <div class="campaign-brand">Fevicol</div>
+      <div class="campaign-line">"Kuch cheezein toot-ti nahi. Sirf bikhar-ti hain."</div>
+      <p class="campaign-desc">Stop-motion series exploring emotional permanence over product strength. The idea: some things don't break — they just scatter. A meditation on attachment, memory, and what holds us together.</p>
+    </div>
+    <div class="campaign-card">
+      <div class="campaign-brand">Nykaa</div>
+      <div class="campaign-line">"Not ready yet. And that's the best part."</div>
+      <p class="campaign-desc">Unfinished moments, honest process over transformation reveal. A campaign that celebrates the in-between — the half-done look, the learning curve, the becoming. Refreshingly anti-highlight-reel.</p>
+    </div>
+    <div class="campaign-card">
+      <div class="campaign-brand">Just Herbs</div>
+      <div class="campaign-line">"Your skin, but calmer."</div>
+      <p class="campaign-desc">Slow-cinema aesthetics, quiet restoration over dramatic transformation. No before-and-after. Just stillness, light, and skin that breathes. For a brand that earns trust through patience.</p>
+    </div>
+  </div>
+</section>
+
+<!-- ─── REAL COPY ─────────────────────────────-->
+<section id="copy">
+  <div class="section-label">Campaign Copy</div>
+  <h2 class="section-title">Real Campaign <em>Copy</em></h2>
+  <p class="work-intro" style="margin-top:1rem">Copy that did a job — drove bookings, tracked conversions, built seasonal moments.</p>
+  <div class="copy-grid">
+    <div class="copy-card">
+      <div class="copy-brand">Sugar Beauty Lounge · Eid</div>
+      <div class="copy-headline">"Look as radiant as the occasion."</div>
+      <p class="copy-desc">Seasonal booking drive. Feeling over discount. This headline was the anchor for the Eid Glow campaign — a moment-first approach that treated the offer as secondary to the emotion.</p>
+    </div>
+    <div class="copy-card">
+      <div class="copy-brand">Sugar Beauty Lounge · Ramadan</div>
+      <div class="copy-headline">"Not just a bath. A full-body reset."</div>
+      <p class="copy-desc">Ritual-first copy for the Moroccan Bath service. Tracked daily sales during Ramadan. Framing the treatment as a ritual — not a service — was the key to conversion.</p>
+    </div>
+    <div class="copy-card">
+      <div class="copy-brand">Yogashi Bakery · Breakfast Launch</div>
+      <div class="copy-headline">"Morning, but make it an occasion."</div>
+      <p class="copy-desc">Community-first launch copy. Made breakfast feel like an event worth showing up for — not just a meal. Led the conversation before the doors opened.</p>
+    </div>
+    <div class="copy-card">
+      <div class="copy-brand">Yogashi Bakery · Ramadan</div>
+      <div class="copy-headline">Facebook → WhatsApp Lead Gen</div>
+      <p class="copy-desc">Full campaign with fresh photoshoot. Used Facebook to drive WhatsApp enquiries — a conversion path that kept the brand conversation intimate and direct.</p>
+    </div>
+    <div class="copy-card">
+      <div class="copy-brand">Assurekit Technologies · B2B</div>
+      <div class="copy-headline">"Your business is covered. Really."</div>
+      <p class="copy-desc">Clear, no-jargon, B2B-first copy. In a category full of corporate noise, directness was the differentiator. The word "Really" did a lot of heavy lifting.</p>
+    </div>
+  </div>
+</section>
+
+<!-- ─── PUBLISHED WORK ────────────────────────-->
+<section id="published">
+  <div class="section-label">Writing</div>
+  <h2 class="section-title">Published <em>Work</em></h2>
+  <div class="published-grid">
+    <div>
+      <div class="pub-group-title">PR &amp; Editorial — National Publications</div>
+      <div class="pub-item">
+        <div class="pub-title">Emergency Fund: How Much Is Enough?</div>
+        <div class="pub-where"><strong>News18</strong></div>
+      </div>
+      <div class="pub-item">
+        <div class="pub-title">The FIRE Method: Retire in Your 30s or 40s</div>
+        <div class="pub-where"><strong>CNBC TV18</strong></div>
+      </div>
+      <div class="pub-item">
+        <div class="pub-title">High Deductible Motor Insurance</div>
+        <div class="pub-where"><strong>Financial Express</strong></div>
+      </div>
+    </div>
+    <div>
+      <div class="pub-group-title">Digital &amp; Content</div>
+      <div class="pub-item">
+        <div class="pub-title">Finance Writing — Own Byline</div>
+        <div class="pub-where"><strong>Medium</strong></div>
+      </div>
+      <div class="pub-item">
+        <div class="pub-title">Tech Blogs</div>
+        <div class="pub-where"><strong>Assurekit</strong></div>
+      </div>
+      <div class="pub-item">
+        <div class="pub-title">Website Copy — End to End</div>
+        <div class="pub-where"><strong>NextSAA Services</strong></div>
+      </div>
+      <div class="pub-item">
+        <div class="pub-title">The Story of Nangeli — Video Script</div>
+        <div class="pub-where"><strong>YouTube</strong></div>
+      </div>
+      <div class="pub-item">
+        <div class="pub-title">Ghostwriting — Business Analytics</div>
+        <div class="pub-where"><strong>Quora</strong></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ─── META RESULTS ──────────────────────────-->
+<section id="meta">
+  <div class="section-label">Analytics</div>
+  <h2 class="section-title">Campaign <em>Performance</em></h2>
+  <p class="meta-subtext">Real campaign analytics — Sugar Beauty Lounge &amp; Yogashi Bakery</p>
+
+  <!-- SUGAR BEAUTY LOUNGE -->
+  <div class="perf-brand-block">
+    <div class="perf-brand-label">Sugar Beauty Lounge · Instagram Analytics</div>
+    <div class="perf-grid">
+      <div class="perf-card perf-highlight">
+        <div class="perf-num">3,067</div>
+        <div class="perf-title">Accounts Reached</div>
+        <div class="perf-sub">Organic reach in period</div>
+      </div>
+      <div class="perf-card perf-highlight">
+        <div class="perf-num">+181</div>
+        <div class="perf-title">New Followers</div>
+        <div class="perf-sub">+0.7% growth · Total: 17,022</div>
+      </div>
+      <div class="perf-card perf-highlight">
+        <div class="perf-num">173</div>
+        <div class="perf-title">Profile Interactions</div>
+        <div class="perf-sub">73.2% from existing followers</div>
+      </div>
+      <div class="perf-card perf-highlight">
+        <div class="perf-num">9,717</div>
+        <div class="perf-title">Profile Views</div>
+        <div class="perf-sub">61.6% from non-followers</div>
+      </div>
+      <div class="perf-card perf-highlight">
+        <div class="perf-num">+849</div>
+        <div class="perf-title">Profile Visits</div>
+        <div class="perf-sub">Strong spike in new interest</div>
+      </div>
+      <div class="perf-card perf-stat">
+        <div class="perf-stat-row"><span class="perf-stat-label">Follower reach</span><span class="perf-stat-val">73.2%</span></div>
+        <div class="perf-stat-row"><span class="perf-stat-label">Non-follower reach</span><span class="perf-stat-val">26.8%</span></div>
+        <div class="perf-stat-row" style="margin-top:0.8rem"><span class="perf-stat-label">Views — followers</span><span class="perf-stat-val">38.4%</span></div>
+        <div class="perf-stat-row"><span class="perf-stat-label">Views — non-followers</span><span class="perf-stat-val">61.6%</span></div>
+      </div>
+    </div>
+    <div class="perf-insight">
+      "The account maintained steady upward momentum — 3,000+ accounts reached and 181 new followers in a single period. High engagement from the existing community shows strong brand loyalty, while 849 profile visits signal a massive spike in new interest."
+    </div>
+    <!-- Image placeholder for Sugar screenshot -->
+    <div class="perf-img-slot">
+      <div class="ip-icon">📊</div>
+      <p>Add your Sugar Meta Insights screenshot here</p>
+      <small>Replace: &lt;img src="sugar-meta.jpg" style="width:100%;border-radius:2px"&gt;</small>
+    </div>
+  </div>
+
+  <!-- YOGASHI BAKERY -->
+  <div class="perf-brand-block" style="margin-top:3rem">
+    <div class="perf-brand-label">Yogashi Bakery · Campaign Results</div>
+    <div class="perf-grid">
+      <div class="perf-card perf-highlight">
+        <div class="perf-num">221K+</div>
+        <div class="perf-title">Influencer Reach</div>
+        <div class="perf-sub">@justfooddxb — Top collaborator</div>
+      </div>
+      <div class="perf-card perf-highlight">
+        <div class="perf-num">144K+</div>
+        <div class="perf-title">Influencer Reach</div>
+        <div class="perf-sub">@sallycakeaway</div>
+      </div>
+      <div class="perf-card perf-highlight">
+        <div class="perf-num">87.8K</div>
+        <div class="perf-title">Influencer Reach</div>
+        <div class="perf-sub">@anabushbush</div>
+      </div>
+      <div class="perf-card perf-highlight">
+        <div class="perf-num">FB→WA</div>
+        <div class="perf-title">Lead Gen Funnel</div>
+        <div class="perf-sub">Ramadan campaign — Facebook to WhatsApp direct conversion</div>
+      </div>
+      <div class="perf-card perf-highlight">
+        <div class="perf-num">Brand</div>
+        <div class="perf-title">Built from Zero</div>
+        <div class="perf-sub">Logo · Packaging · Guidelines · Menu · Recipe Book</div>
+      </div>
+      <div class="perf-card perf-stat">
+        <div class="perf-stat-row"><span class="perf-stat-label">Breakfast launch</span><span class="perf-stat-val">Community-first</span></div>
+        <div class="perf-stat-row"><span class="perf-stat-label">Ramadan campaign</span><span class="perf-stat-val">FB → WA leads</span></div>
+        <div class="perf-stat-row"><span class="perf-stat-label">Influencer collab</span><span class="perf-stat-val">3 creators</span></div>
+        <div class="perf-stat-row"><span class="perf-stat-label">Full case study</span><span class="perf-stat-val"><a href="https://soudcoh.com/case-study/yogashi-bakery" target="_blank" style="color:var(--gold)">soudcoh.com ↗</a></span></div>
+      </div>
+    </div>
+    <div class="perf-insight">
+      "Built the entire Yogashi brand from scratch — identity, packaging, and all digital content — then took it to market with influencer partnerships reaching 450K+ combined, and a Ramadan Facebook-to-WhatsApp lead gen campaign that drove direct conversions."
+    </div>
+    <!-- Image placeholder for Yogashi screenshot -->
+    <div class="perf-img-slot">
+      <div class="ip-icon">📊</div>
+      <p>Add your Yogashi Meta Insights screenshot here</p>
+      <small>Replace: &lt;img src="yogashi-meta.jpg" style="width:100%;border-radius:2px"&gt;</small>
+    </div>
+  </div>
+</section>
+
+<!-- ─── ACHIEVEMENTS ─────────────────────────-->
+<section id="achievements">
+  <div class="section-label">Recognition</div>
+  <h2 class="section-title" style="color:var(--gold-light)">A Few Things Worth Noting</h2>
+  <div class="achieve-grid">
+    <div class="achieve-card">
+      <div class="achieve-year">2020</div>
+      <div class="achieve-title">Jagriti Yatra</div>
+      <p class="achieve-desc">Selected from thousands of applicants nationwide for one of India's most prestigious entrepreneurial leadership journeys. 15 days. Hundreds of change-makers. An experience that changed how I think about business and purpose.</p>
+    </div>
+    <div class="achieve-card">
+      <div class="achieve-year">2021</div>
+      <div class="achieve-title">InstaReM Global Campaign</div>
+      <p class="achieve-desc">800,000+ audience reached in August 2021 through purely organic content — no paid amplification. The milestone I'm most proud of, because it happened through pure storytelling discipline and strategic distribution, not budget.</p>
+    </div>
+    <div class="achieve-card">
+      <div class="achieve-year">Selected</div>
+      <div class="achieve-title">Jio MAMI Film Festival</div>
+      <p class="achieve-desc">Young Critics Team, India Gold Theme — selected among 2 lakh students from across India. A recognition of cultural curiosity, critical thinking, and the ability to write with precision about the art of storytelling.</p>
+    </div>
+    <div class="achieve-card">
+      <div class="achieve-year">2026</div>
+      <div class="achieve-title">1 Billion Followers Summit</div>
+      <p class="achieve-desc">Attendee at the 1 Billion Followers Summit, Dubai — one of the most significant digital content and creator summits in the world. Keeping a pulse on the future of content, platforms, and brand storytelling at scale.</p>
+    </div>
+  </div>
+</section>
+
+<!-- ─── EXPERIENCE ────────────────────────────-->
+<section id="experience">
+  <div class="section-label">Career</div>
+  <h2 class="section-title">8 Years, <em>Every Role</em></h2>
+  <div class="exp-list">
+    <div class="exp-item">
+      <div class="exp-date">2024 – 2026</div>
+      <div class="exp-right">
+        <div class="exp-role">Marketing &amp; Brand Manager</div>
+        <div class="exp-company">Sugar Beauty Lounge · Dubai</div>
+        <p class="exp-desc">Owned the brand — strategy, content, campaigns, influencer relationships, in-salon events, digital channels, SMS. Grew a premium beauty lounge into a community with numbers to match.</p>
+        <div class="exp-metrics">
+          <div class="exp-metric"><strong>+18%</strong> Revenue</div>
+          <div class="exp-metric"><strong>+25%</strong> Engagement</div>
+          <div class="exp-metric"><strong>+15%</strong> SMS Conversion</div>
+          <div class="exp-metric"><strong>+20%</strong> Bookings</div>
+        </div>
+      </div>
+    </div>
+    <div class="exp-item">
+      <div class="exp-date">Jul 2023 – Jan 2024</div>
+      <div class="exp-right">
+        <div class="exp-role">Lead Marketing Manager</div>
+        <div class="exp-company">NextSAA Services</div>
+        <p class="exp-desc">Multi-client marketing at pace. Built tailored brand identities and social strategies per client, supervised agency output, ran GTM planning, and wrote the full website copy end to end for NextSAA Services.</p>
+        <div class="exp-metrics">
+          <div class="exp-metric"><strong>20%+</strong> Follower Growth Across Clients</div>
+          <div class="exp-metric"><strong>+25%</strong> Engagement Increase</div>
+        </div>
+      </div>
+    </div>
+    <div class="exp-item">
+      <div class="exp-date">2022 – 2023</div>
+      <div class="exp-right">
+        <div class="exp-role">Assistant Marketing Manager</div>
+        <div class="exp-company">Assurekit Technologies</div>
+        <p class="exp-desc">Built strategies that made the brand recognisable in a competitive insurtech landscape, drove acquisition, and kept existing customers engaged with consistent messaging across digital, PR, and events.</p>
+        <div class="exp-metrics">
+          <div class="exp-metric"><strong>+30%</strong> New Customer Acquisition</div>
+          <div class="exp-metric"><strong>60%</strong> Retention Rate</div>
+        </div>
+      </div>
+    </div>
+    <div class="exp-item">
+      <div class="exp-date">Jan – Aug 2022</div>
+      <div class="exp-right">
+        <div class="exp-role">Content Strategist</div>
+        <div class="exp-company">Clazia Events &amp; Expo</div>
+        <p class="exp-desc">Brought structure to content at large-scale events — digital marketing campaigns to stakeholder coordination — ensuring exhibitors, fabricators, and clients all moved in the same direction.</p>
+      </div>
+    </div>
+    <div class="exp-item">
+      <div class="exp-date">Apr – Dec 2021</div>
+      <div class="exp-right">
+        <div class="exp-role">Brand Operations Coordinator</div>
+        <div class="exp-company">Sixthsense Communications · InstaReM</div>
+        <p class="exp-desc">The role where an organic content strategy hit 800,000 people in a single month. Also supported project operations for HUL, ITC, BYJU'S, and Native Milk.</p>
+        <div class="exp-metrics">
+          <div class="exp-metric"><strong>800K+</strong> Organic Reach</div>
+          <div class="exp-metric"><strong>+40%</strong> User Growth</div>
+          <div class="exp-metric"><strong>+55%</strong> Revenue from Content</div>
+        </div>
+      </div>
+    </div>
+    <div class="exp-item">
+      <div class="exp-date">2019 – 2020</div>
+      <div class="exp-right">
+        <div class="exp-role">Student Advisor (Freelance)</div>
+        <div class="exp-company">BYJU'S</div>
+        <p class="exp-desc">Understanding how people receive information, what makes them engage, what makes them switch off — made me a better communicator than any textbook.</p>
+      </div>
+    </div>
+    <div class="exp-item">
+      <div class="exp-date">2018 – 2019</div>
+      <div class="exp-right">
+        <div class="exp-role">Content Writer</div>
+        <div class="exp-company">Midocean Infomedia</div>
+        <p class="exp-desc">Where it all started. Writing websites, blogs, product descriptions, and brand content from scratch. Learning that words aren't decoration — they're the brand experience itself.</p>
+      </div>
+    </div>
+  </div>
+  <div class="edu-section">
+    <div class="edu-title">Education</div>
+    <div class="edu-items">
+      <div class="edu-item">
+        <div class="exp-date">NMIMS Mumbai</div>
+        <div>
+          <div class="edu-deg">MBA — Marketing Management</div>
+        </div>
+      </div>
+      <div class="edu-item">
+        <div class="exp-date">University of Mumbai</div>
+        <div>
+          <div class="edu-deg">Bachelor of Mass Media</div>
+        </div>
+      </div>
+      <div class="edu-item">
+        <div class="exp-date">Prayag Sangeet Samiti</div>
+        <div>
+          <div class="edu-deg">Indian Classical Vocal — 3-Year Diploma</div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- P.S. note -->
+  <div class="ps-note">
+    <p><strong>P.S.</strong> I take data confidentiality seriously and haven't brought any proprietary information from previous employers. Happy to walk through specific projects and contributions in more detail during a conversation — some things are better explained in person than on a page.</p>
+  </div>
+</section>
+
+<!-- ─── WHAT SETS ME APART ────────────────────---->
+<section id="differentiators" style="background:var(--burgundy)">
+  <div class="section-label" style="color:var(--gold)">Why Me</div>
+  <h2 class="section-title" style="color:var(--gold-light)">I'm not just <em style="color:rgba(232,213,163,0.75)">a content person.</em></h2>
+  <div class="differ-grid">
+    <div class="differ-card">
+      <div class="differ-num">01 —</div>
+      <div class="differ-title">I think in systems, not posts</div>
+      <p class="differ-desc">Anyone can write a caption. I build the frameworks — content calendars, campaign arcs, brand voice guides — that make great content happen consistently, not just when inspiration strikes.</p>
+    </div>
+    <div class="differ-card">
+      <div class="differ-num">02 —</div>
+      <div class="differ-title">I understand brands emotionally</div>
+      <p class="differ-desc">Before I touch a strategy, I want to know how a brand makes people feel. That emotional intelligence is what makes campaigns land — and separates forgettable content from content that builds real loyalty.</p>
+    </div>
+    <div class="differ-card">
+      <div class="differ-num">03 —</div>
+      <div class="differ-title">I've worked across wildly different industries</div>
+      <p class="differ-desc">Beauty in Dubai. Bakeries. Fintech. Events. Media. Tech. That cross-sector experience means I bring unexpected ideas to every brief — and I know how to adapt without losing the brand's core.</p>
+    </div>
+    <div class="differ-card">
+      <div class="differ-num">04 —</div>
+      <div class="differ-title">I can lead or execute — whatever you need</div>
+      <p class="differ-desc">I've managed agencies, led teams, and also written copy at midnight to hit a deadline. I'm not precious about hierarchy. I care about the work being good and the brand moving forward.</p>
+    </div>
+  </div>
+</section>
+
+<!-- ─── PROCESS ───────────────────────────────-->
+<section id="process">
+  <div class="section-label" style="justify-content:center">How I Work</div>
+  <h2 class="section-title" style="color:var(--gold-light);text-align:center">My Process, <em style="color:rgba(232,213,163,0.7)">Simply Put</em></h2>
+  <p class="process-quote">"I don't start with what to post. I start with what the brand actually needs to say."</p>
+  <div class="process-steps">
+    <div class="process-step">
+      <div class="process-num">01</div>
+      <div class="process-step-title">Listen First</div>
+      <p class="process-step-desc">Understand the brand, the audience, what's been tried, what's been avoided. The gaps are usually in that first conversation.</p>
+    </div>
+    <div class="process-step">
+      <div class="process-num">02</div>
+      <div class="process-step-title">Find the Truth</div>
+      <p class="process-step-desc">Every brand has an emotional truth people connect with. Most brands don't lead with it. That tension is where the best work lives.</p>
+    </div>
+    <div class="process-step">
+      <div class="process-num">03</div>
+      <div class="process-step-title">Build for Consistency</div>
+      <p class="process-step-desc">One viral post is luck. A brand that shows up the same way across 12 months of content? That's strategy.</p>
+    </div>
+    <div class="process-step">
+      <div class="process-num">04</div>
+      <div class="process-step-title">Stay in the Work</div>
+      <p class="process-step-desc">I don't hand off and disappear. I review copy, brief creative, track what's landing and adjust in real time.</p>
+    </div>
+    <div class="process-step">
+      <div class="process-num">05</div>
+      <div class="process-step-title">Learn &amp; Evolve</div>
+      <p class="process-step-desc">Data tells you what happened. Context tells you why. I use analytics not just to report — but to genuinely understand.</p>
+    </div>
+  </div>
+</section>
+
+<!-- ─── INTERESTS ─────────────────────────────-->
+<section id="interests">
+  <div class="section-label">Beyond the Brief</div>
+  <h2 class="section-title">The Things That <em>Shape Me</em></h2>
+  <div class="interests-grid">
+    <div class="interest-card">
+      <div class="interest-num">01 · Passion</div>
+      <div class="interest-name">Regional Cinema</div>
+      <p class="interest-desc">The most culturally specific stories are actually the most universal. Regional cinema shaped how I think about storytelling — with specificity, not safety.</p>
+    </div>
+    <div class="interest-card">
+      <div class="interest-num">02 · Discipline</div>
+      <div class="interest-name">Indian Classical Music</div>
+      <p class="interest-desc">Three years of classical vocal training. It taught me about rhythm, restraint, and building to a moment — things that show up in how I structure campaign narratives.</p>
+    </div>
+    <div class="interest-card">
+      <div class="interest-num">03 · Craft</div>
+      <div class="interest-name">Photography</div>
+      <p class="interest-desc">The discipline of noticing what others walk past. Makes me a better creative director and content brief writer.</p>
+    </div>
+    <div class="interest-card">
+      <div class="interest-num">04 · Curiosity</div>
+      <div class="interest-name">Brand &amp; Campaign Analysis</div>
+      <p class="interest-desc">I collect campaign teardowns for fun. Deconstructing why something worked — or didn't — keeps my strategic thinking honest.</p>
+    </div>
+    <div class="interest-card">
+      <div class="interest-num">05 · Perspective</div>
+      <div class="interest-name">Travel &amp; Culture</div>
+      <p class="interest-desc">Every city has a brand personality. Traveling keeps me culturally curious and helps me communicate across contexts.</p>
+    </div>
+    <div class="interest-card">
+      <div class="interest-num">06 · Voice</div>
+      <div class="interest-name">Microfiction &amp; Writing</div>
+      <p class="interest-desc">Saying everything you need to say in very few words. Which is, coincidentally, exactly what good brand copy demands.</p>
+    </div>
+  </div>
+</section>
+
+<!-- ─── CONTACT ───────────────────────────────-->
+<section id="contact">
+  <div class="section-label" style="justify-content:center;color:var(--gold)">Let's Work Together</div>
+  <h2 class="contact-headline">Let's build something<br><em>worth remembering.</em></h2>
+  <p class="contact-closing">"I don't start with what to post. I start with what the brand actually needs to say."</p>
+  <div class="contact-details">
+    <a href="mailto:atripathi.content@gmail.com">atripathi.content@gmail.com</a>
+    <a href="tel:+918356069106">+91 835 606 9106</a>
+    <a href="https://linkedin.com/in/anuradha-tripathi" target="_blank">linkedin.com/in/anuradha-tripathi</a>
+  </div>
+  <div class="contact-location">Mumbai · Dubai · Global</div>
+  <div class="contact-btns">
+    <a class="btn-primary" href="mailto:atripathi.content@gmail.com">Email Me</a>
+    <a class="btn-outline" href="https://linkedin.com/in/anuradha-tripathi" target="_blank">LinkedIn ↗</a>
+    <a class="btn-outline" href="tel:+918356069106">Call / WhatsApp</a>
+  </div>
+</section>
+
+<footer>
+  © 2026 Anuradha Tripathi · Marketing &amp; Brand · Mumbai · Dubai · Global
+</footer>
+
+<script>
+  function toggleCS(header) {
+    const body = header.nextElementSibling;
+    const arrow = header.querySelector('.cs-arrow');
+    const isOpen = body.classList.contains('open');
+    body.classList.toggle('open');
+    arrow.textContent = isOpen ? '↓' : '↑';
+    arrow.style.transform = isOpen ? 'rotate(0deg)' : 'rotate(0deg)';
+  }
+
+  // Fade in on scroll
+  const observer = new IntersectionObserver((entries) => {
+    entries.forEach(e => {
+      if (e.isIntersecting) {
+        e.target.style.opacity = '1';
+        e.target.style.transform = 'translateY(0)';
+      }
+    });
+  }, { threshold: 0.08 });
+
+  document.querySelectorAll('.metric-card, .case-study, .design-col, .campaign-card, .copy-card, .achieve-card, .exp-item, .interest-card').forEach(el => {
+    el.style.opacity = '0';
+    el.style.transform = 'translateY(24px)';
+    el.style.transition = 'opacity 0.6s ease, transform 0.6s ease';
+    observer.observe(el);
+  });
+</script>
+</body>
+</html>
